@@ -1,3 +1,4 @@
+#!/bin/bash
 # 1) Start up and ensure the working directory is clean and necessary tools are installed.
 
 RED='\033[0;31m'
