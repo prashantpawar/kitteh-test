@@ -1,4 +1,4 @@
-defmodule Elmelixirstarter.ConnCase do
+defmodule KittehTest.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,32 +20,32 @@ defmodule Elmelixirstarter.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias Elmelixirstarter.Repo
+      alias KittehTest.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
-      import Elmelixirstarter.Router.Helpers
+      import KittehTest.Router.Helpers
 
-      import Elmelixirstarter.Factory
+      import KittehTest.Factory
 
       # The default endpoint for testing
-      @endpoint Elmelixirstarter.Endpoint
+      @endpoint KittehTest.Endpoint
 
       # Copied from
       # https://github.com/hassox/phoenix_guardian/blob/54152b8ca0ffa6afb4076e93814a54c68430f3e8/test/support/conn_case.ex
       # We need a way to get into the connection to login a user
       # We need to use the bypass_through to fire the plugs in the router
       # and get the session fetched.
-      def guardian_login(%Elmelixirstarter.User{} = user), do: guardian_login(build_conn(), user, :token, [])
-      def guardian_login(%Elmelixirstarter.User{} = user, token), do: guardian_login(build_conn(), user, token, [])
-      def guardian_login(%Elmelixirstarter.User{} = user, token, opts), do: guardian_login(build_conn(), user, token, opts)
+      def guardian_login(%KittehTest.User{} = user), do: guardian_login(build_conn(), user, :token, [])
+      def guardian_login(%KittehTest.User{} = user, token), do: guardian_login(build_conn(), user, token, [])
+      def guardian_login(%KittehTest.User{} = user, token, opts), do: guardian_login(build_conn(), user, token, opts)
 
       def guardian_login(%Plug.Conn{} = conn, user), do: guardian_login(conn, user, :token, [])
       def guardian_login(%Plug.Conn{} = conn, user, token), do: guardian_login(conn, user, token, [])
       def guardian_login(%Plug.Conn{} = conn, user, token, opts) do
         conn
-          |> bypass_through(Elmelixirstarter.Router, [:browser])
+          |> bypass_through(KittehTest.Router, [:browser])
           |> get("/")
           |> Guardian.Plug.sign_in(user, token, opts)
           |> send_resp(200, "Flush the session yo")
@@ -55,10 +55,10 @@ defmodule Elmelixirstarter.ConnCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Elmelixirstarter.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(KittehTest.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Elmelixirstarter.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(KittehTest.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

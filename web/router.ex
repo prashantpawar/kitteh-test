@@ -1,5 +1,5 @@
-defmodule Elmelixirstarter.Router do
-  use Elmelixirstarter.Web, :router
+defmodule KittehTest.Router do
+  use KittehTest.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -18,7 +18,7 @@ defmodule Elmelixirstarter.Router do
     plug Guardian.Plug.LoadResource
   end
 
-  scope "/", Elmelixirstarter do
+  scope "/", KittehTest do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
@@ -33,7 +33,7 @@ defmodule Elmelixirstarter.Router do
     end
   end
 
-  scope "/api", Elmelixirstarter do
+  scope "/api", KittehTest do
     pipe_through :api
     get "/me", UserController, :me
   end

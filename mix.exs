@@ -1,8 +1,8 @@
-defmodule Elmelixirstarter.Mixfile do
+defmodule KittehTest.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :elmelixirstarter,
+    [app: :kitteh_test,
      version: "0.1.0",
      elixir: "~> 1.4",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -17,7 +17,7 @@ defmodule Elmelixirstarter.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {Elmelixirstarter, []},
+    [mod: {KittehTest, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex, :ueberauth_twitter,
                     :ex_machina]]

@@ -1,9 +1,9 @@
-defmodule Elmelixirstarter.UserViewTest do
-  use Elmelixirstarter.ModelCase
+defmodule KittehTest.UserViewTest do
+  use KittehTest.ModelCase
 
-  alias Elmelixirstarter.UserView
+  alias KittehTest.UserView
 
-  import Elmelixirstarter.Factory
+  import KittehTest.Factory
 
   test "#show renders the user" do
     user = insert(:user)

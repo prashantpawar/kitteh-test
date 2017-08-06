@@ -1,7 +1,7 @@
-defmodule Elmelixirstarter.UserTest do
-  use Elmelixirstarter.ModelCase
+defmodule KittehTest.UserTest do
+  use KittehTest.ModelCase
 
-  alias Elmelixirstarter.User
+  alias KittehTest.User
 
   @valid_attrs %{image_url: "some content", name: "some content", username: "some content", provider_secret: "some content", provider_token: "some content", twitter_user_id: 42}
   @invalid_attrs %{}

@@ -1,5 +1,5 @@
-defmodule Elmelixirstarter.ErrorView do
-  use Elmelixirstarter.Web, :view
+defmodule KittehTest.ErrorView do
+  use KittehTest.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

@@ -1,7 +1,7 @@
-defmodule Elmelixirstarter.AuthErrorHandlerTest do
-  use Elmelixirstarter.ConnCase
+defmodule KittehTest.AuthErrorHandlerTest do
+  use KittehTest.ConnCase
 
-  alias Elmelixirstarter.AuthErrorHandler
+  alias KittehTest.AuthErrorHandler
 
   test "unauthenticated error handler", %{conn: conn} do
     conn = AuthErrorHandler.unauthenticated(conn, %{})

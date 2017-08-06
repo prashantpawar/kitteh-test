@@ -1,8 +1,8 @@
-defmodule Elmelixirstarter.GuardianSerializerTest do
-  use Elmelixirstarter.ModelCase
-  import Elmelixirstarter.Factory
+defmodule KittehTest.GuardianSerializerTest do
+  use KittehTest.ModelCase
+  import KittehTest.Factory
 
-  alias Elmelixirstarter.GuardianSerializer
+  alias KittehTest.GuardianSerializer
 
   describe "#for_token" do
     test "when given a user, it returns the right string" do

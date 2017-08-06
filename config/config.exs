@@ -6,19 +6,19 @@
 use Mix.Config
 
 # General application configuration
-config :elmelixirstarter,
-  ecto_repos: [Elmelixirstarter.Repo]
+config :kitteh_test,
+  ecto_repos: [KittehTest.Repo]
 
 # Configures the endpoint
-config :elmelixirstarter, Elmelixirstarter.Endpoint,
+config :kitteh_test, KittehTest.Endpoint,
   url: [host: "localhost"],
   secret_key_base: System.get_env("PHOENIX_SECRET_KEY_BASE"),
-  render_errors: [view: Elmelixirstarter.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Elmelixirstarter.PubSub,
+  render_errors: [view: KittehTest.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: KittehTest.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configure your database
-config :elmelixirstarter, Elmelixirstarter.Repo,
+config :kitteh_test, KittehTest.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: System.get_env("PG_USER"),
   password: System.get_env("PG_PASS"),
@@ -45,13 +45,13 @@ config :ueberauth, Ueberauth.Strategy.Twitter.OAuth,
 config :guardian, Guardian,
   allowed_algos: ["HS512"], # optional
   verify_module: Guardian.JWT,  # optional
-  issuer: "Elmelixirstarter",
+  issuer: "KittehTest",
   ttl: { 30, :days },
   allowed_drift: 2000,
   verify_issuer: true, # optional
   # replace this before production, obviously 💻
   secret_key: System.get_env("GUARDIAN_SECRET_KEY"),
-  serializer: Elmelixirstarter.GuardianSerializer
+  serializer: KittehTest.GuardianSerializer
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

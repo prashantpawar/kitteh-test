@@ -1,10 +1,10 @@
-defmodule Elmelixirstarter.User do
+defmodule KittehTest.User do
   @moduledoc """
   A model to represent your users. This assumes they're logging in and being identified via
   Twitter; you can customize this as desired.
   """
 
-  use Elmelixirstarter.Web, :model
+  use KittehTest.Web, :model
 
   schema "users" do
     field :name, :string

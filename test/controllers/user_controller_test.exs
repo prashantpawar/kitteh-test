@@ -1,9 +1,9 @@
-defmodule Elmelixirstarter.UserControllerTest do
-  use Elmelixirstarter.ConnCase
+defmodule KittehTest.UserControllerTest do
+  use KittehTest.ConnCase
 
   test "#me requires a login", %{conn: conn} do
     conn = get conn, user_path(conn, :me)
-    assert json_response(conn, 401) == Elmelixirstarter.AuthErrorHandler.unauthenticated_response
+    assert json_response(conn, 401) == KittehTest.AuthErrorHandler.unauthenticated_response
   end
 
   test "#me renders the user" do
@@ -19,7 +19,7 @@ defmodule Elmelixirstarter.UserControllerTest do
   defp render_json(template, assigns) do
     assigns = Map.new(assigns)
 
-    Elmelixirstarter.UserView.render(template, assigns)
+    KittehTest.UserView.render(template, assigns)
     |> Poison.encode!
     |> Poison.decode!
   end

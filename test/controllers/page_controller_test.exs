@@ -1,5 +1,5 @@
-defmodule Elmelixirstarter.PageControllerTest do
-  use Elmelixirstarter.ConnCase
+defmodule KittehTest.PageControllerTest do
+  use KittehTest.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

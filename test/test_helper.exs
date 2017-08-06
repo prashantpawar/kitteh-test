@@ -2,5 +2,5 @@
 
 ExUnit.start
 
-Ecto.Adapters.SQL.Sandbox.mode(Elmelixirstarter.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(KittehTest.Repo, :manual)
 

@@ -1,12 +1,12 @@
-defmodule Elmelixirstarter.Web do
+defmodule KittehTest.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use Elmelixirstarter.Web, :controller
-      use Elmelixirstarter.Web, :view
+      use KittehTest.Web, :controller
+      use KittehTest.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule Elmelixirstarter.Web do
     quote do
       use Phoenix.Controller
 
-      alias Elmelixirstarter.Repo
+      alias KittehTest.Repo
       import Ecto
       import Ecto.Query
 
-      import Elmelixirstarter.Router.Helpers
-      import Elmelixirstarter.Gettext
+      import KittehTest.Router.Helpers
+      import KittehTest.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule Elmelixirstarter.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import Elmelixirstarter.Router.Helpers
-      import Elmelixirstarter.ErrorHelpers
-      import Elmelixirstarter.Gettext
+      import KittehTest.Router.Helpers
+      import KittehTest.ErrorHelpers
+      import KittehTest.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule Elmelixirstarter.Web do
     quote do
       use Phoenix.Channel
 
-      alias Elmelixirstarter.Repo
+      alias KittehTest.Repo
       import Ecto
       import Ecto.Query
-      import Elmelixirstarter.Gettext
+      import KittehTest.Gettext
     end
   end
 

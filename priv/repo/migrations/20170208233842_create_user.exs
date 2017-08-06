@@ -1,4 +1,4 @@
-defmodule Elmelixirstarter.Repo.Migrations.CreateUser do
+defmodule KittehTest.Repo.Migrations.CreateUser do
   use Ecto.Migration
 
   def change do

@@ -1,5 +1,5 @@
-defmodule Elmelixirstarter.UserView do
-  use Elmelixirstarter.Web, :view
+defmodule KittehTest.UserView do
+  use KittehTest.Web, :view
 
   def render("show.json", %{user: user}) do
     user_json(user)

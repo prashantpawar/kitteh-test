@@ -1,4 +1,4 @@
-defmodule Elmelixirstarter.ErrorHelpers do
+defmodule KittehTest.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule Elmelixirstarter.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(Elmelixirstarter.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(KittehTest.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(Elmelixirstarter.Gettext, "errors", msg, opts)
+      Gettext.dgettext(KittehTest.Gettext, "errors", msg, opts)
     end
   end
 end

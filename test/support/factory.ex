@@ -1,8 +1,8 @@
-defmodule Elmelixirstarter.Factory do
-  use ExMachina.Ecto, repo: Elmelixirstarter.Repo
+defmodule KittehTest.Factory do
+  use ExMachina.Ecto, repo: KittehTest.Repo
 
   def user_factory do
-    %Elmelixirstarter.User{
+    %KittehTest.User{
       name: "A name",
       image_url: "gopher://images.biz",
       username: sequence("user username"),

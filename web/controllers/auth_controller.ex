@@ -1,9 +1,9 @@
-defmodule Elmelixirstarter.AuthController do
-  use Elmelixirstarter.Web, :controller
+defmodule KittehTest.AuthController do
+  use KittehTest.Web, :controller
 
   plug Ueberauth
 
-  alias Elmelixirstarter.User
+  alias KittehTest.User
 
   # see example at
   # https://github.com/ueberauth/ueberauth_example/blob/master/web/controllers/auth_controller.ex

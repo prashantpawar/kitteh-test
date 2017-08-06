@@ -1,4 +1,4 @@
-defmodule Elmelixirstarter.GuardianSerializer do
+defmodule KittehTest.GuardianSerializer do
   @moduledoc """
   This module handles serialization and deserialization of user info from the session storage so
   that you can identify the user after auth.
@@ -6,8 +6,8 @@ defmodule Elmelixirstarter.GuardianSerializer do
 
   @behaviour Guardian.Serializer
 
-  alias Elmelixirstarter.Repo
-  alias Elmelixirstarter.User
+  alias KittehTest.Repo
+  alias KittehTest.User
 
   # Sample implementation adapted from https://github.com/ueberauth/guardian
   def for_token(%User{} = user), do: {:ok, "User:#{user.id}"}

@@ -1,4 +1,4 @@
-defmodule Elmelixirstarter.ChannelCase do
+defmodule KittehTest.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -20,22 +20,22 @@ defmodule Elmelixirstarter.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias Elmelixirstarter.Repo
+      alias KittehTest.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
 
       # The default endpoint for testing
-      @endpoint Elmelixirstarter.Endpoint
+      @endpoint KittehTest.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Elmelixirstarter.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(KittehTest.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Elmelixirstarter.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(KittehTest.Repo, {:shared, self()})
     end
 
     :ok

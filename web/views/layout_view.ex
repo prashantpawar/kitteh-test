@@ -1,3 +1,3 @@
-defmodule Elmelixirstarter.LayoutView do
-  use Elmelixirstarter.Web, :view
+defmodule KittehTest.LayoutView do
+  use KittehTest.Web, :view
 end

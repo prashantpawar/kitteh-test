@@ -1,3 +1,3 @@
-defmodule Elmelixirstarter.PageViewTest do
-  use Elmelixirstarter.ConnCase, async: true
+defmodule KittehTest.PageViewTest do
+  use KittehTest.ConnCase, async: true
 end

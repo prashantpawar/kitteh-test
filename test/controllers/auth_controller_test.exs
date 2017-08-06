@@ -1,8 +1,8 @@
-defmodule Elmelixirstarter.AuthControllerTest do
-  use Elmelixirstarter.ConnCase
+defmodule KittehTest.AuthControllerTest do
+  use KittehTest.ConnCase
 
-  alias Elmelixirstarter.Repo
-  alias Elmelixirstarter.User
+  alias KittehTest.Repo
+  alias KittehTest.User
 
   describe "#callback with omniauth failure" do
     test "redirects to home without creating a user" do

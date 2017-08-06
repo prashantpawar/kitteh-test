@@ -1,3 +1,3 @@
-defmodule Elmelixirstarter.LayoutViewTest do
-  use Elmelixirstarter.ConnCase, async: true
+defmodule KittehTest.LayoutViewTest do
+  use KittehTest.ConnCase, async: true
 end

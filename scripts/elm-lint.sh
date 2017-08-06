@@ -9,7 +9,7 @@
 
 cd elm
 # Remove any previously-compiled Elm artifacts to ensure we compile and lint everything
-rm -rf elm-stuff/build-artifacts/0.18.0/arsduo
+rm -rf elm-stuff/build-artifacts/0.18.0/prashantpawar
 
 # First, does it compile successfully?
 elm-make Main.elm --yes --output /tmp/elm-linting.html --warn &> /tmp/elm-linting-output
